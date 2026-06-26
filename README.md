@@ -16,6 +16,16 @@ This skill is calibrated to Arizona authority, including:
 
 It is not an ABA Model Rules skill. ABA, Restatement, and other-state authority should be treated only as background unless Arizona authority makes it relevant.
 
+## Companion skill: azbar-ethics-navigator
+
+The [`skills/azbar-ethics-navigator/`](skills/azbar-ethics-navigator/) folder contains a companion **retrieval/navigation skill** for the State Bar of Arizona website. Where `ethics-check-az` does the *analysis*, `azbar-ethics-navigator` does the *fetching*: it pulls clean, verbatim text of Arizona ethics opinions and Rules of Professional Conduct (the "ER" Ethical Rules) from the State Bar's server-rendered endpoints, and documents the working URLs, the ER-to-RuleId and opinion-number-to-id maps, and the browser-freeze / result-truncation / privacy-filter workarounds that otherwise make `azbar.org` hard to scrape.
+
+- Skill instructions: [`skills/azbar-ethics-navigator/SKILL.md`](skills/azbar-ethics-navigator/SKILL.md)
+- Reference files: [`skills/azbar-ethics-navigator/references/`](skills/azbar-ethics-navigator/references/) (`rule-id-map.md`, `harvest-playbook.md`)
+- Packaged archive: `skills/azbar-ethics-navigator/azbar-ethics-navigator.skill`
+
+Use `ethics-check-az` to reason about an Arizona ethics question; use `azbar-ethics-navigator` when you need the underlying opinion or rule text.
+
 ## Install
 
 For Codex:
@@ -36,8 +46,8 @@ To package the skill as a `.skill` archive from the parent directory:
 
 ```bash
 zip -r ethics-check-az.skill ethics-check-az \
-  -x "ethics-check-az/.git/*" \
-  -x "ethics-check-az/.DS_Store"
+-x "ethics-check-az/.git/*" \
+-x "ethics-check-az/.DS_Store"
 ```
 
 ## Use
