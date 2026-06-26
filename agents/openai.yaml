@@ -1,0 +1,7 @@
+interface:
+  display_name: "Arizona Ethics Check"
+  short_description: "Arizona lawyer ethics analysis"
+  default_prompt: "Use $ethics-check-az to analyze an Arizona lawyer ethics question with Arizona authority."
+
+policy:
+  allow_implicit_invocation: true
